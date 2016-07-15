@@ -1,0 +1,23 @@
+{
+    "name": "fuel/fuel",
+    "type": "project",
+    "description" : "FuelPHP is a simple, flexible, community driven PHP 5.3+ framework, based on the best ideas of other frameworks, with a fresh start!",
+    "keywords": ["application", "website", "development", "framework", "PHP"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.3",
+        "monolog/monolog": "1.5.0",
+    	"fuelphp/upload": "2.0.1",
+        "phpunit/phpunit": "4.1.3",
+        "twig/twig": "1.15.1",
+        "guzzlehttp/guzzle": "6.1.1",
+        "guzzlehttp/psr7": "1.3.0",
+        "swiftmailer/swiftmailer": "5.2.1",
+        "inlinestyle/inlinestyle": "1.2.5"
+    },
+
+    "config": {
+        "vendor-dir": "fuel/vendor"
+    },
+    "minimum-stability": "dev"
+}

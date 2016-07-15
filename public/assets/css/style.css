@@ -1,0 +1,341 @@
+
+ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+li { margin: 5px; padding: 5px; width: 150px; }
+.draggable{
+    float: left;
+    width: 100%;
+    border: 1px solid gray;
+    padding: 10px;}
+
+.columns{
+    min-height : 150px;
+    border : 1px solid #DDD;
+    margin:5px 0px;
+    background : white;
+}
+/*
+.column-menu{
+    float: left;
+    width: 46%;
+    padding: 5px;
+    margin: 5px;
+    cursor:pointer;
+    max-width: 200px;
+
+}
+*/
+#container-menu{
+    background : #313131;
+    color: white;
+    border : 1px solid black;
+    height: 100%;
+    min-height: 1024px;
+    padding-top: 38px;
+}
+.viewPeri,.type,.back{
+    border: 1px solid gray;
+    cursor:pointer;
+}
+.sortableElement{
+    border : 1px solid #00BFFF;
+}
+hr {
+    float:left;
+    width:100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.ipadContent{
+    width:768px !important;
+    height:1024px !important;
+    background: white;
+    margin-top: 205px;
+}
+.mobileContent{
+    width:375px !important;
+    height:667px !important;
+    background: white;
+    margin-top: 205px;
+
+}
+.mobileContent .col425 {
+    width:100% !important;
+
+
+}
+.mobileContent .col380 {
+    width:100% !important;
+
+
+}
+.mobileBackground{
+    background: url("../img/mobile.png") no-repeat;
+    background-position-x:center;
+
+}
+.ipadBackground{
+    background: url("../img/ipad.png") no-repeat;
+    background-position-x:center;
+
+}
+#menu-top{
+    position: fixed;
+    top:0px;
+
+    width: 100%;
+    background-color: #313131;
+}
+#menu-top ul{
+    margin: 0px auto;
+    width: 91%;
+    padding: 0px;
+}
+#menu-top ul li{
+    float:left;
+    width: 110px;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Nimbus Sans L,Liberation Sans,Arimo,sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    height: 39px;
+    cursor: pointer;
+}
+#menu-top ul li a{
+
+    color: #eee;
+
+    text-decoration: none;
+}
+#menu-top ul li i{
+    float:left;
+    color: #eee;
+    margin-top: 3px;
+
+
+}
+#menu-top ul li.active{
+
+    border-bottom: 5px solid #e47c00;
+    padding-bottom: 0px;
+    background: #313131 !important;
+
+}
+#menu-top ul li.disabled{
+
+
+    opacity : 0.5;
+    cursor: auto;
+
+}
+#menu-top ul li.disabled a{
+
+
+    color: #eee;
+
+
+}
+#menu-top ul li:hover{
+
+    background: #e47c00;
+
+}
+.menu-content{
+    float: left;
+    width : 100%;
+}
+#contenu{
+    display: block;
+}
+#style,#preview,#galerie{
+    display: none;
+}
+.progress {
+    display: none;
+}
+.uploadzone {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+
+#dropzone.hover,#dropzone.in {
+    background-color:rgba(255,87,34,.8);
+
+}
+#ui-state-drop-data{
+    font-family:Noto Sans,Helvetica Neue,Helvetica,Arial,Nimbus Sans L,Liberation Sans,Arimo,sans-serif;
+    font-size:16px;text-decoration:none!important;font-weight:700;
+    content:attr(data-drop-content);
+    text-align:center;
+    line-height:24px;
+    position:absolute;
+    -webkit-animation:droppable-pulsate 1s ease-in-out infinite alternate;
+    animation:droppable-pulsate 1s ease-in-out infinite alternate;
+    top:-14px;left:-10px;
+    height:24px;
+    background-color:rgba(255,87,34,.6);
+    background-clip:content-box;
+    color:white;right:-10px;
+    border:2px dashed #ff5722;
+    z-index:10;
+    pointer-events:none;
+    line-height:45px;
+    height:auto;
+    top:-10px;
+    bottom:-10px;
+}
+#dropzone.fade {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}
+.ui-state-img{
+    text-shadow: 1px 1px 0 #FFFFFF, 0 0 10px #FFFFFF; font-weight: bold;text-shadow: none!important;
+    font-weight: 700;
+    background-color: rgba(255,255,255,.2);
+    padding: 3px;color:white;display: none;
+    background-color: rgba(255,87,34,.6);
+}
+.dropzone2 {
+    height: 100%;
+}
+.ui-state-highlight{
+    color: white;
+    background: #E47C00;
+}
+
+.table-striped>tbody>tr {
+    background: none !important;
+}
+.column-menuText{
+    text-align:center;
+    width: 100%;
+    float: left;
+}
+.labelDrag{
+    float:right;
+    margin-top:3px;
+}
+.previewDrag{
+    width:200px;
+}
+.ui-corner,.ui-cornerDrag,.ui-cornerDelete,.ui-cornerVideo{
+    width: 30px;
+    height: 30px;
+    /* padding: 8px; */
+    border-radius: 50%;
+    background: #E47C00;
+    position: absolute;
+    right: -16px;
+    top: -15px;
+    text-align: center;
+    padding-top: 6px;
+    cursor:pointer;
+}
+.ui-cornerDelete{
+    top: -50px !important;
+}
+.ui-cornerVideo{
+    top: -100px !important;
+}
+.ui-corner i,.ui-cornerDrag i,.ui-cornerDelete i,.ui-cornerVideo i{
+    font-size: 18px;
+    color:white;
+}
+.tools{
+    position:absolute;
+    display: none;
+}
+
+.block{
+    margin-bottom: 30px;
+}
+.espaceur{
+    border : 1px dashed orange;
+}
+
+.columns{
+    min-height: 150px;
+    border: 1px solid #DDD;
+    margin: 5px 0px;
+    background: white;
+}
+.column-menu-block, .column-menu-composant, .column-menu-element{
+    float: left;
+    width: 46%;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    max-width: 200px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.column-menu-composant{
+    height: 120px;
+}
+
+.column-menu-element{
+    height: 210px;
+}
+.composant-icon{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.composant-icon-content{
+    font-size: 40px;
+    color: #313131;
+}
+
+.composant-icon-element{
+    font-size: 20px;
+    color: #313131;
+}
+
+.column-menu{
+    border-radius: 3px 3px 3px 3px;
+    border: 2px solid #313131;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    width: 10px;
+    height: 80%;
+}
+
+.composant-button{
+    width: 40%;
+    height: 15px;
+    background-color: transparent;
+    margin-top: 4px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid #313131;
+    border-radius: 5px;
+}
+
+.separator{
+    width: 80%;
+    margin-right: 5px;
+    margin-left: 15px;
+    margin-top: 50px;
+    height: 2px;
+    background-color: #313131;
+}
+.delete-composant{
+    height : auto;
+    padding: 5px 2px;
+    color: white;
+    font-weight: bold;
+}

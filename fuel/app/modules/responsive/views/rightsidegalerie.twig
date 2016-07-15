@@ -1,0 +1,107 @@
+<div id="galerie" class="menu-content">
+    <div style="float:left;width : 100%; padding: 10px;">
+        <h2>Galerie</h2>
+
+        <div style="float:left;width : 100%; padding: 10px;">
+            <form id="fileupload" class="dragGalerie" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
+
+
+                <div class="row fileupload-buttonbar">
+                    <div class="col-lg-12">
+                        <!-- The fileinput-button span is used to style the file input field as button -->
+                        <div id="dropzone"  >
+                            <div class="mo-uploadzone" style="position: relative; padding: 2em; border: 2px dotted #808080; text-align: center;">
+                                <input class="fileupload" type="file" multiple="" name="files[]" style="z-index: 10;position: absolute;top: 0;left: 0;right: 0;bottom: 0;min-width: 100%;min-height: 100%;font-zie: 999px;text-align: right;filter: alpha(opacity=0);opacity: 0;outline: none;cursor: inherit;display: block;" title=" ">
+                                <span class="uploadzone" >Click or drag file here</span>
+                                <div class="workzone" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;">
+                                    <div class="progress" style="opacity: .5; width: 80%; margin-left: 10%; position: absolute; bottom: 30%; height: 20px; border: 2px solid black;">
+                                        <div class="progress-bar progress-bar-success" style="height: 20px; width: 0px; background-color: black;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span id='ui-state-drop-data' style="display: none;">Drop it here</span>
+                        </div>
+
+                        <!-- The global file processing state -->
+                        <span class="fileupload-process"></span>
+                    </div>
+                    <!-- The global progress state -->
+                    <div class="col-lg-5 fileupload-progress fade">
+                        <!-- The global progress bar -->
+                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                        </div>
+                        <!-- The extended global progress state -->
+                        <div class="progress-extended">&nbsp;</div>
+                    </div>
+                </div>
+                <!-- The table listing the files available for upload/download -->
+                <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+            </form>
+        </div>
+
+
+    </div>
+    <hr >
+</div>
+{% verbatim %}
+    <!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload ">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+
+            <strong class="error"></strong>
+        </td>
+        <td>
+            <p class="size">Processing...</p>
+            <div class="progress"></div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="start" disabled>Start</button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="cancel">Cancel</button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download ">
+        <td>
+            <span class="preview">
+                {% if (file.extension == "png" || file.extension == "jpeg" || file.extension == "jpg" || file.extension == "gif") { %}
+
+                    	 <img src="{%=file.thumbnailUrl%}"  class="draggable3" data-url="{%=file.url%}" data-type="imageReel" style="cursor:pointer;" >
+
+                {% }else{ %}
+                     <img src="/netmessage/public/assets/img/{%=file.extension %}.png"  class="draggable3" data-url="{%=file.url%}" data-extension="{%=file.extension%}" data-type="document" style="cursor:pointer;width:80px;" >
+
+                {% } %}
+            </span>
+        </td>
+        <td>
+
+            {% if (file.error) { %}
+                <div><span class="error">Error</span> {%=file.error%}</div>
+            {% } %}
+        </td>
+        <td>
+            <span class="size">{%=o.formatFileSize(file.size)%}</span>
+        </td>
+        <td>
+            <button class="delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>Delete</button>
+
+        </td>
+    </tr>
+{% } %}
+
+</script>
+ {% endverbatim %}

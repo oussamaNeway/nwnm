@@ -1,0 +1,142 @@
+<div  class="container" style="float:left;min-height:300px;width:75%;height:100%;padding-top: 38px;"  ondragover="return false">
+    <div id="perview" style="float: left;width: 100%;">
+        <table width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td>
+                    <![endif]-->
+                    <table id="Controller" class="content" align="center" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td class="header sortable ui-sortable ui-sortable-handle" bgcolor="#313131"> <!-- #c7d8a7 -->
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="innerpadding borderbottom sortable">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="innerpadding borderbottom sortable">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="footer sortable" bgcolor="#313131"> <!-- #44525f -->
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td align="center" class="footercopy" contenteditable=true>
+                                            Model Mail responsive By Neway-Si 2016<br/>
+                                            <a href="#" contenteditable=true><font color="#ffffff">Unsubscribe</font></a> from this newsletter instantly
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="padding: 20px 0 0 0;">
+                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="37" style="text-align: center; padding: 0 10px 0 10px;">
+                                                        <a href="http://www.facebook.com/">
+                                                            {{ asset_img('facebook.png',{"width" : 37,"height":37}) }}
+                                                        </a>
+                                                    </td>
+                                                    <td width="37" style="text-align: center; padding: 0 10px 0 10px;">
+                                                        <a href="http://www.twitter.com/">
+                                                          {{ asset_img('twitter.png',{"width" : 37,"height":37}) }}
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="float:left;width:100%;">
+        <textarea style="width: 100%;min-height: 500px;display: none;" id="textarea"></textarea>
+    </div>
+</div>
+<!--  Modal : Sauvegarder le travail -->
+<div class="modal fade" id="saveWorkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Sauvegarde de travail</h4>
+            </div>
+            <div class="modal-body">
+                Souhaitez vous sauvegarder le travail ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="saveWork(objectCss+$('.container').html());">Sauvegarder</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  Modal : Modification du code HTML	-->
+<div class="modal fade" id="editHtmlModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width: 900px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modification du code HTML</h4>
+                <a id="importBtn" data-toggle="modal" data-target="#importModal" onclick="initPopUpImport()">Importer une template externe</a>
+            </div>
+            <div class="modal-body" style="height: 600px;">
+                <div id="aceEditor" style="height: 500px; width: 100%;">some text</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="editHtmlCode(editor.getValue());">Modifier</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  Modal : Import HTML	-->
+<div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width: 900px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Importer une template HTML externe</h4>
+                 </div>
+            <div class="modal-body" style="height: 200px;">
+               <form action="{{ path('responsive_upload') }}" method="post" enctype="multipart/form-data">
+                    <div id="ImportHtmlStep1">
+                        <h2>Choisissez le fichier HTML :</h2><br />
+                        <input type="file" name="html" /><br />
+                        <a class="btn btn-primary" id="BtnStep1Next">Suivant</a>
+                    </div>
+                    <div id="ImportHtmlStep2">
+                        <h2>Choisissez les images du HTML :</h2><br />
+                        <input type="file" name="images[]" multiple /><br />
+                        <a class="btn btn-primary" id="BtnStep2Back">Précedent</a> &nbsp;
+                        <a class="btn btn-primary" id="BtnStep2Next">Suivant</a>
+                    </div>
+                    <div id="ImportHtmlStep3">
+                        <h2>Le nom du repertoire HTML :</h2><br />
+                        <input type="text" name="nomHtml" /><br /><br />
+                        <a class="btn btn-primary" id="BtnStep3Back">Précedent</a>&nbsp;
+                        <input type="submit" class="btn btn-primary" value="Valider"  />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+

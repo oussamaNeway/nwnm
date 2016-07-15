@@ -1,0 +1,54 @@
+<div id="menu-top">
+
+
+    <div  style="float: left;margin-right : 20px;width: 31%;">
+        <ul>
+            <li class="menu-back disabled" id="back" style="width: 118px;">
+                <i class="fa fa-mail-reply"></i>
+                <a>UNDO (<span id="lengthModifs"><script>document.write(modifs.length)</script></span>)</a>
+            </li>
+            <li class="menu-back disabled" id="next">
+                <i class="fa fa-mail-forward"></i>
+                <a>REDO</a>
+            </li>
+            <li class="menu-choix" data-id="galerie">
+                <i class="fa fa-photo"></i>
+                <a>Galerie</a>
+            </li>
+
+
+        </ul>
+    </div>
+    <div style="float: left;margin-right : 20px;width: 31%;">
+        <ul>
+            <li class="menu-choix active" data-id="contenu">
+                <i class="fa fa-pencil"></i>
+                <a>Contenu</a>
+            </li>
+            <li class="menu-choix" data-id="style">
+                <i class="fa fa-paint-brush"></i>
+                <a>Style</a>
+            </li>
+            <li class="menu-choix" data-id="preview">
+                <i class="fa fa-mobile" style="font-size: 20px;"></i>
+                <a>Preview</a>
+            </li>
+
+        </ul>
+    </div>
+    <div  style="float: left;margin-right : 20px;width: 31%;">
+        <ul>
+            <li class="menu-back" id="valide" >
+                <a>Sauvegarder</a>
+            </li>
+            <li class="menu-back" id="quit" >
+                <a id="saveWorkBtn" data-toggle="modal" data-target="#saveWorkModal">Quiter</a>
+            </li>
+            <li class="menu-back" id="htmlEdit" >
+                <a id="saveWorkBtn" data-toggle="modal" data-target="#editHtmlModal" onclick="editHtml($('#Controller').html())">HTML</a>
+            </li>
+
+
+        </ul>
+    </div>
+</div>

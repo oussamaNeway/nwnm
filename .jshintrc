@@ -1,0 +1,26 @@
+{
+    "node": true,
+    "curly": true,
+    "eqeqeq": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "sub": true,
+    "undef": false,
+    "unused": true,
+    "eqnull": false,
+    "-W080": false,
+    "newcap": false,
+    "globals": {
+        //jQuery: true,
+        "require": false,
+        "module": false,
+        "console": false,
+        "__dirname": false,
+        "__filename": false,
+        "process": false,
+        "exports": false
+    },
+    "boss": true
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Editeur HTML</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://www.neway-si.com/media.css">
+    <link rel="stylesheet" href="http://www.neway-si.com/styleEditeur.css">
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+
+
+
+
+    {{ asset_css('icones/font-awesome.min.css') }}
+    {{ asset_css('jquery.fileupload.css') }}
+    {{ asset_css('jquery.fileupload-ui.css') }}
+    {{ asset_css('jquery.fileupload-noscript.css') }}
+    {{ asset_css('jquery.fileupload-ui-noscript.css') }}
+    {{ asset_css('style.css') }}
+    {{ asset_css('colorpicker.css') }}
+
+    <script>
+        var columnsSelected;
+        var type;
+        var url;
+        var modifs=[];
+        var modifsNext=[];
+        var count = 1;
+        var addTitle = false;
+        var unsaved = false;
+        var extension;
+        <!------------------------ 	Code Reda ----------------------->
+        var objectCss = '<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><link rel="stylesheet" href="http://www.neway-si.com/media.css"><link rel="stylesheet" href="http://www.neway-si.com/styleEditeur.css">';
+        <!------------------------ 	Fin Code Reda ----------------------->
+
+    </script>
+</head>
+<body yahoo bgcolor="#f6f8f1" ondragover="return false">
+
+ {{ menuTop }}
+
+{{ rightSide }}
+
+
+{{ centerBlock }}
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<!-- The Templates plugin is included to render the upload/download listings -->
+<script src="//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+<!-- blueimp Gallery script -->
+<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+ <!------------------------ 	Code Reda ----------------------->
+ <!-- Bootstrap js-->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+ <!-- embeded code editor -->
+ <script src="https://cdn.jsdelivr.net/ace/1.2.3/min/ace.js"></script>
+ <script>
+     var editor = ace.edit("aceEditor");
+     editor.setTheme("ace/theme/monokai");
+     editor.getSession().setMode("ace/mode/html");
+ </script>
+ <!------------------------ 	Fin Code Reda ----------------------->
+
+ {{ asset_js('fileUpload/jquery.iframe-transport.js') }}
+ {{ asset_js('fileUpload/jquery.fileupload.js') }}
+ {{ asset_js('fileUpload/jquery.fileupload-process.js') }}
+ {{ asset_js('fileUpload/jquery.fileupload-image.js') }}
+ {{ asset_js('fileUpload/jquery.fileupload-validate.js') }}
+ {{ asset_js('fileUpload/jquery.fileupload-ui.js') }}
+ {{ asset_js('fileUpload/jquery.fileupload-jquery-ui.js') }}
+ {{ asset_js('fileUpload/mainUploadFileGalerie.js') }}
+ {{ asset_js('fileUpload/mainUploadFilehtml.js') }}
+ {{ asset_js('fileUpload/jquery.ui.widget.js') }}
+ {{ asset_js('ckeditor/ckeditor.js') }}
+ {{ asset_js('bootstrap-checkbox.min.js') }}
+ {{ asset_js('colorpicker.js') }}
+
+
+<!--<script src='//cdn.tinymce.com/4/tinymce.min.js'></script> -->
+ {{ asset_js('global.js') }}
+
+
+
+
+
+</body>
+</html>
