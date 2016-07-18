@@ -1,0 +1,158 @@
+<div id="contenu" class="menu-content">
+
+
+
+    <div style="float:left;width : 100%; padding: 10px;">
+        <h2>Blocks</h2>
+        <hr />
+        <div style="float:left;width : 100%;padding: 7px;background: white;border-radius: 5px;color: #E47C00; margin-top: 10px;">
+            <ul>
+                <li  class="ui-state-highlight draggable column-menu" data-column="100">
+                    <span class="column-menuText">une colonne</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable column-menu" data-column="260-1,260-2">
+                    <span class="column-menuText">2 colonnes</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable column-menu" data-column="174-1,174-2,174-3">
+                    <span class="column-menuText">3 colonnes</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable column-menu" data-column="130-1,130-2,130-3,130-4">
+                    <span class="column-menuText">4 colonnes</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable column-menu" data-column="104-1,104-2,104-3,104-4,104-5">
+                    <span class="column-menuText">5 colonnes</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable column-menu" data-column="87-1,87-2,87-3,87-4,87-5,87-6">
+                    <span class="column-menuText">6 colonnes</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable column-menu" data-column="70,425">
+                    <span class="column-menuText">2 colonnes (70,425)</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+
+                <li  class="ui-state-highlight draggable column-menu" data-column="115,380">
+                    <span class="column-menuText">2 colonnes (115,380)</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+            </ul>
+            <!--<div  class="ui-state-highlight draggable column-menu" data-column="4">4 4 4 colonnes</div> -->
+
+        </div>
+
+    </div>
+
+    <hr >
+
+    <div style="float:left;width : 100%; padding: 10px;">
+        <h2>Composants</h2>
+        <hr />
+        <div style="float:left;width : 100%;padding: 15px;background: white;border-radius: 5px;color: #E47C00; margin-top: 10px;">
+            <ul>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="text+button">
+                    <span class="column-menuText">text+button</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="title+text">
+                    <span class="column-menuText">Title + Text</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="2titles">
+                    <span class="column-menuText">2 Titles</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="image">
+                    <span class="column-menuText">Image</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="title">
+                    <span class="column-menuText">Titre</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="text">
+                    <span class="column-menuText">Texte</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="button">
+                    <span class="column-menuText">Button</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="separator">
+                    <span class="column-menuText">Separator</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="espaceur">
+                    <span class="column-menuText">Espaceur</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="share">
+                    <span class="column-menuText">Partager</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="pay">
+                    <span class="column-menuText">Paiement</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li> <li  class="ui-state-highlight draggable2 column-menu type" data-type="list">
+                    <span class="column-menuText">Liste</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                </li>
+                <li  class="ui-state-highlight draggable2 column-menu type" data-type="video">
+                    <span class="column-menuText">Video</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+
+            </ul>
+        </div>
+
+
+
+    </div>
+
+    <hr >
+
+    <div style="float:left;width : 100%; padding: 10px;">
+        <h2>Elements composés</h2>
+        <hr />
+        <div style="float:left;width : 100%;padding: 15px;background: white;border-radius: 5px;color: #E47C00; margin-top: 10px;">
+            <ul>
+                <li  class="ui-state-highlight draggable column-menu type" data-column="100,composant">
+                    <span class="column-menuText"> Image + Title + Text + Button</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable column-menu type" data-column="260-1,260-2,composant">
+                    <span class="column-menuText"> Image + texte  2 colonnes </span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+
+                <li  class="ui-state-highlight draggable column-menu type" data-column="260-1,260-2,composantITTB">
+                    <span class="column-menuText"> Image + Title + Text + Button  2 colonne</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable column-menu type" data-column="174-1,174-2,174-3,composant">
+                    <span class="column-menuText"> Image + Title + Text + Button  3 colonne</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+                <li  class="ui-state-highlight draggable column-menu type" data-column="130-1,130-2,130-3,130-4,composant">
+                    <span class="column-menuText"> Image + Title + Text + Button  4 colonne</span>
+                    <span class="labelDrag label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+   

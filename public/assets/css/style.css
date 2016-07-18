@@ -339,3 +339,11 @@ h2{
     color: white;
     font-weight: bold;
 }
+/*
+div[id^=cke_]{
+   position: absolute;
+
+    top: 20%;
+    left: 2%;
+
+}*/

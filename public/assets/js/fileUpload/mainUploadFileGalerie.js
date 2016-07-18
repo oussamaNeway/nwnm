@@ -102,7 +102,7 @@ $(function () {
                 result.files[i].extension= res;
 
             }
-            
+
             $(this).fileupload('option', 'done')
                 .call(this, $.Event('done'), {result: result});
             $( ".draggable3" ).draggable({

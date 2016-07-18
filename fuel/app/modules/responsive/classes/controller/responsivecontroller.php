@@ -57,19 +57,28 @@ class ResponsiveController extends Controller_Template
 
             foreach(Upload::get_files() as $value){
                 if($value['extension']=="zip" || $value['extension']=="rar"){
-                    echo 'Upload et la decompression du fichier Zip en cours de construction';
-                    die();
                     $zip = new \ZipArchive();
-                    if($zip->open($value['saved_to'].$value['saved_as'])== true){
-
-                        $zip->extractTo('.'.$value['saved_to'],'*.*');
+                    $pathFile = str_replace("\\","/",$value['saved_to'].$value['saved_as']);
+                    echo $pathFile."<br />";
+                    echo file."<br />";
+                    if ($zip->open($pathFile) == true){
+                        echo $zip->numFiles."<br />";
+                        $path = str_replace("\\","/",$value['saved_to']);
+                        echo $path."<br />";
+                        var_dump($zip);
+die();
+                        $zip->extractTo($path);
                         $zip->close();
-                        echo 'ok';
+                        echo 'Done.';
+                    } else {
+                        echo "Error";
                     }
-                    die();
+
+
                 }
             }
 
+            die();
 
         }
 

@@ -615,14 +615,31 @@ $(function() {
     $(document).on("click","#Controller p,#Controller b,#Controller h1,#Controller h2,#Controller h3,#Controller h4,#Controller h5,#Controller h6",function(){
 
         var id =$(this).attr( "id" );
+        var positionTopOfText = $("#"+id).position().top;
         var editor = CKEDITOR.replace( id );
-        $(document).on( 'mouseleave',"#cke_"+id, function( evt ) {
+       /* $(document).on( 'mouseleave',"#cke_"+id, function( evt ) {
             var contenu =  editor.getData().replace('<p>','').replace('</p>','');
            editor.updateElement();
             editor.destroy();
             $('#'+id).html(contenu);
 
            // console.log( );
+        });*/
+        CKEDITOR.on('instanceLoaded', function(e) {
+            e.editor.resize('70%', 500);
+            $("#cke_"+id).css({"position": "absolute","z-index": "555","width": "70%","height": "319px","top": positionTopOfText,"left": "2%"});
+            $("div[id*=_contents]").css({"height": "150px"});
+        });
+
+        $(window).click(function(e) {
+            if($(e.target).attr("class") == undefined || $(e.target).attr("class").indexOf("cke") == -1 )
+            {
+                var contenu =  editor.getData().replace('<p>','').replace('</p>','');
+                editor.updateElement();
+                editor.destroy();
+                $('#'+id).html(contenu);
+            }
+
         });
         $(".menu-choix").removeClass("active");
         $(".menu-choix[data-id='style']").addClass("active");
